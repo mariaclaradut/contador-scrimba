@@ -41,6 +41,7 @@ body {
         border-radius: 2px;
         cursor: pointer;
     }
+
     & #error {
         position: fixed;
         background: rgb(109, 188, 253);
@@ -52,44 +53,56 @@ body {
     }
 
     & #container {
+        font-size: 30px;
         width: 75%;
         height: 75%;
         margin: auto;
         background-color: aliceblue;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        flex-direction: column;
 
-        & #count-el {
-            font-family: "Playwrite NZ Basic", cursive;
-            font-size: 150px;
-            padding: 10px;
+        & #numbers {
+            display: flex;
+            justify-content: center;
         }
 
-        & .btn {
-            font-size: 20px;
-            font-family: "Inter", sans-serif;
-            font-weight:bold;
+        & #operations {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin: 40px;
+            grid-gap: 20px;
+        }
+
+        & span {
+            border-bottom: 3px solid rgb(109, 188, 253);
             padding: 10px;
-            background-color: aliceblue;
-            color: rgb(109, 188, 253);
-            border: 3px solid rgb(109, 188, 253); 
-            border-radius: 10px;
             margin: 5px;
+            border-radius: 5px 5px 0px 0px;
             transition: background 0.3s ease-in-out;
         }
 
+        & span:hover {
+            background: rgb(220, 238, 253);
+        }
+
+        & .btn {
+            background:  rgb(220, 238, 253);
+            color: rgb(109, 188, 253);
+            border: 1px solid rgb(109, 188, 253);
+            font-weight: bold;
+            cursor: pointer;
+            padding: 5px 8px;
+            transition: background 0.3s ease-in-out;
+            border-radius: 5px;
+            font-size: 25px;
+        }
+
         & .btn:hover {
-            background-color: rgb(220, 238, 253);
+            background-color: rgb(188, 224, 253);
+            color: rgb(91, 181, 255);
         }
     }
-
-    #save-el {
-        font-size: 25px;
-        width: 75%;
-        text-align: center;
-    }
 }
-
 
