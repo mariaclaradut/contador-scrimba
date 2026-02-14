@@ -1,0 +1,23 @@
+#numbers {
+    display: flex;
+    justify-content: center;
+}
+
+#operations {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 40px;
+    grid-gap: 20px;
+}
+
+span {
+    border-bottom: 3px solid rgb(109, 188, 253);
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px 5px 0px 0px;
+    transition: background 0.3s ease-in-out;
+}
+
+span:hover {
+    background: rgb(220, 238, 253);
+}

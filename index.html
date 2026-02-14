@@ -3,28 +3,29 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width" , inicial-scale="1.0">
+  <meta name="viewport" content="width=device-width" , initial-scale="1.0">
 
   <title>Contador</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="/css/index.css" />
 </head>
 
 <body>
   <header>
     <a href="/calc.html">Calculadora</a>
     <a href="/blackjack.html">Blackjack</a>
+    <p id="error">Algo deu errado, tente novamente</p>
     <button id="btn-error">ERRO</button>
   </header>
-  <p id="error">Algo deu errado, tente novamente</p>
-  <div id="container">
+  <main>
     <h3 id="count-el">0</h3>
     <div>
         <button class="btn" id="btn-increment">ADICIONE MAIS UM</button>
         <button class="btn" id="btn-save">SALVAR</button>
     </div>
-  </div>
-  <p id="save-el">Contagens anteriores: </p>
-  <script src="./script.js"></script>
+  </main>
+  <footer id="save-el">Contagens anteriores: </footer>
+  <script src="./script/index.js"></script>
 </body>
 
 </html>

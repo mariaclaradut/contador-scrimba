@@ -1,0 +1,12 @@
+#count-el {
+    font-family: "Playwrite NZ Basic", cursive;
+    font-size: 150px;
+    padding: 10px;
+}
+
+#save-el {
+    font-size: 25px;
+    width: 75%;
+    text-align: center;
+    margin: 0 0 10px 0;
+}

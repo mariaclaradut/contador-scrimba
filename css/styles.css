@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: rgb(220, 238, 253);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(109, 188, 253);
+
+    & header {
+        font-size: 20px;
+        width: 100vw;
+
+        & a {
+            margin: 10px 0 0 10px;
+            position: relative;
+            float:inline-start;
+            padding: 5px 10px;
+            background: rgb(109, 188, 253);
+            color:  rgb(220, 238, 253);
+            border: none;
+            border-radius: 2px;
+            text-decoration: none;
+        }
+
+        & #btn-error {
+            margin: 10px 10px 0 0;
+            position: relative;
+            float:inline-end;
+            padding: 5px 10px;
+            background: rgb(109, 188, 253);
+            color:  rgb(220, 238, 253);
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        & #error {
+            position: absolute;
+            margin: 10px 0 0 0;
+            justify-self: center;
+            background: rgb(109, 188, 253);
+            color:  rgb(220, 238, 253);
+            padding: 5px 10px 5px 10px;
+            border: none;
+            border-radius: 2px;
+            display: none;
+        }
+    }
+
+
+
+    & main{
+        font-size: 30px;
+        width: 75%;
+        height: 75%;
+        margin: auto;
+        background-color: aliceblue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;        
+        
+        & .btn {
+            background:  rgb(220, 238, 253);
+            color: rgb(109, 188, 253);
+            border: 1px solid rgb(109, 188, 253);
+            font-weight: bold;
+            cursor: pointer;
+            padding: 5px 8px;
+            transition: background 0.3s ease-in-out;
+            border-radius: 5px;
+            font-size: 25px;
+        }
+
+        & .btn:hover {
+            background-color: rgb(188, 224, 253);
+            color: rgb(91, 181, 255);
+        }
+    }
+}

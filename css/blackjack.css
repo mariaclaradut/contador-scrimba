@@ -1,0 +1,30 @@
+main {
+    gap: 20px;
+
+    & #cards-sum {
+        display: flex;
+        gap: 10px;
+    }
+
+    & p {
+        font-size: 25px;
+        color: rgb(109, 188, 253);
+        background: rgb(220, 238, 253);
+        padding: 10px 20px;
+        border-radius: 5px;
+    }
+
+    & #instructions {
+        font-size: 20px;
+    }
+
+
+    & .btn {
+        display: none;
+    }
+
+    & .btn:hover {
+        background-color: rgb(188, 224, 253);
+        color: rgb(91, 181, 255);
+    }
+}

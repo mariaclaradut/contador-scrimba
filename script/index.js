@@ -1,10 +1,10 @@
-let countEl = document.getElementById("count-el")
-let btnIncrement = document.getElementById("btn-increment")
-let saveEl = document.getElementById("save-el")
-let btnSave = document.getElementById("btn-save")
+let countEl = document.querySelector("#count-el")
+let btnIncrement = document.querySelector("#btn-increment")
+let saveEl = document.querySelector("#save-el")
+let btnSave = document.querySelector("#btn-save")
 let count = 0
 
-let btnError = document.getElementById("btn-error")
+let btnError = document.querySelector("#btn-error")
 
 btnIncrement.addEventListener("click", function increment() {
     count += 1
@@ -24,14 +24,12 @@ btnSave.addEventListener("click", function save() {
 })
 
 btnError.addEventListener("click", function error() {
-    let error = document.getElementById("error")
+    let error = document.querySelector("#error")
     if (error.style.display === "block") {
         error.style.display = "none"
     }
     else {
         error.style.display = "block"
     }
-
-    error.classList.toggle("hidden")
 })
 
