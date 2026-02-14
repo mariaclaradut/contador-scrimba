@@ -52,7 +52,7 @@ function getInputValues() {
 function checkInput() {
     let [num1, num2] = getInputValues()
     if (isNaN(num1) || isNaN(num2)) {
-        resultEl.textContent = "Resultado: Inválido"
+        resultEl.textContent = "Resultado Inválido"
         alert("Por favor, insira um número válido em ambos os campos.")
         return false
     }
