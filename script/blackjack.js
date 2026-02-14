@@ -1,7 +1,8 @@
-let btnError = document.querySelector("#btn-error")
+// Botão de erro
+let btnError = document.getElementById("btn-error")
 
 btnError.addEventListener("click", function error() {
-    let error = document.querySelector("#error")
+    let error = document.getElementById("error")
     if (error.style.display === "block") {
         error.style.display = "none"
     }
@@ -10,25 +11,30 @@ btnError.addEventListener("click", function error() {
     }
 })
 
+// Elementos do HTML
+let cardsEl = document.getElementById("cards-el")
+let instructions = document.getElementById("instructions")
+let sumEl = document.getElementById("sum-el")
+let btnNewCard = document.getElementById("btn-new-card")
+let btnNewGame = document.getElementById("btn-new-game")
+
+// Variáveis do jogo
 let firstCard = getRandomCard()
 let secondCard = getRandomCard()
-
-let cardsEl = document.querySelector("#cards-el")
-let instructions = document.querySelector("#instructions")
-let sumEl = document.querySelector("#sum-el")
-let btnNewCard = document.querySelector("#btn-new-card")
-let btnNewGame = document.querySelector("#btn-new-game")
-
-cardsEl.textContent += firstCard + " - " + secondCard
-
-function getRandomCard() {
-    return Math.floor((Math.random() * 10) + 1)
-}
-
+let cards = [firstCard, secondCard]
 let sum = firstCard + secondCard
+
+// Configurações iniciais do jogo
+cardsEl.textContent += firstCard + " - " + secondCard
 sumEl.textContent = "Soma: " + sum
 verificarSoma(sum)
 
+// Função que gera nova carta (1 a 11)
+function getRandomCard() {
+    return Math.floor((Math.random() * 11) + 1)
+}
+
+// Função que checa o estado do jogador (e atualiza os botões)
 function verificarSoma(sum) {
     if (sum < 21) {
         instructions.textContent = "Ainda pode comprar mais cartas 🙂"
@@ -46,17 +52,26 @@ function verificarSoma(sum) {
     }
 }
 
+// Comprando nova carta
+btnNewCard.addEventListener("click", 
+    function comprarMais() {
+        // Criando nova carta e adicionando ao deck
+        let newCard = getRandomCard()
+        cards.push(newCard)
 
-btnNewCard.addEventListener("click", comprarMais)
-function comprarMais() {
-    let newCard = getRandomCard()
-    sum += newCard
-    sumEl.textContent = "Soma: " + sum
-    cardsEl.textContent += " - " + newCard
-    verificarSoma(sum)
-}
+        // Atualizando a soma e as cartas na tela
+        sum += newCard
+        sumEl.textContent = "Soma: " + sum
+        cardsEl.textContent = "Cartas: " + cards.join(" - ")
 
-btnNewGame.addEventListener("click", novoJogo)
-function novoJogo() {
-    location.reload()
-}
+        // Verificando o estado do jogador
+        verificarSoma(sum)
+    }
+)
+
+// Iniciando um novo jogo
+btnNewGame.addEventListener("click", 
+    function novoJogo() {
+        location.reload()
+    }
+)

@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+:root {
+    --primary-color: rgb(109, 188, 253);
+    --secondary-color: rgb(220, 238, 253);
+    --hover-color: rgb(91, 181, 255);
+    --hover-background-color: rgb(188, 224, 253);
+}
 * {
     margin: 0;
     padding: 0;
@@ -9,12 +15,12 @@
 
 body {
     font-family: "Inter", sans-serif;
-    background-color: rgb(220, 238, 253);
+    background-color: var(--secondary-color);
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: rgb(109, 188, 253);
+    color: var(--primary-color);
 
     & header {
         font-size: 20px;
@@ -25,11 +31,16 @@ body {
             position: relative;
             float:inline-start;
             padding: 5px 10px;
-            background: rgb(109, 188, 253);
-            color:  rgb(220, 238, 253);
+            background: var(--primary-color);
+            color:  var(--secondary-color);
             border: none;
             border-radius: 2px;
             text-decoration: none;
+            transition: filter 0.3s ease-in-out;
+        }
+
+        & a:hover {
+            filter: drop-shadow(0px 0px 5px var(--hover-color));
         }
 
         & #btn-error {
@@ -37,20 +48,25 @@ body {
             position: relative;
             float:inline-end;
             padding: 5px 10px;
-            background: rgb(109, 188, 253);
-            color:  rgb(220, 238, 253);
+            background: var(--primary-color);
+            color:  var(--secondary-color);
             border: none;
             border-radius: 2px;
             cursor: pointer;
             font-size: 20px;
+            transition: filter 0.3s ease-in-out;
+        }
+        
+        & #btn-error:hover {
+            filter: drop-shadow(0px 0px 10px var(--hover-color));
         }
 
         & #error {
             position: absolute;
-            margin: 10px 0 0 0;
+            margin: 56px 0 0 0;
             justify-self: center;
-            background: rgb(109, 188, 253);
-            color:  rgb(220, 238, 253);
+            background: var(--primary-color);
+            color:  var(--secondary-color);
             padding: 5px 10px 5px 10px;
             border: none;
             border-radius: 2px;
@@ -84,8 +100,8 @@ body {
         }
 
         & .btn:hover {
-            background-color: rgb(188, 224, 253);
-            color: rgb(91, 181, 255);
+            background-color: var(--hover-background-color);
+            color: var(--hover-color);
         }
     }
 }
