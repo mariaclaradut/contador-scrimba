@@ -6,25 +6,26 @@
   <meta name="viewport" content="width=device-width" , inicial-scale="1.0">
 
   <title>Contador</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles-blackjack.css" />
 </head>
 
 <body>
   <header>
+    <a href="/index.html">Início</a>
     <a href="/calc.html">Calculadora</a>
-    <a href="/blackjack.html">Blackjack</a>
     <button id="btn-error">ERRO</button>
   </header>
   <p id="error">Algo deu errado, tente novamente</p>
   <div id="container">
-    <h3 id="count-el">0</h3>
-    <div>
-        <button class="btn" id="btn-increment">ADICIONE MAIS UM</button>
-        <button class="btn" id="btn-save">SALVAR</button>
+    <div id="cards-sum">
+        <p id="cards-el">Cartas: </p>
+        <p id="sum-el">Soma: </p>
     </div>
+    <p id="instructions"></p>
+    <button class="btn" id="btn-novo-jogo">Novo jogo</button>
+    <button class="btn"id="btn-comprar-mais">Comprar mais</button>
   </div>
-  <p id="save-el">Contagens anteriores: </p>
-  <script src="./script.js"></script>
+  <script src="./script-blackjack.js"></script>
 </body>
 
 </html>
